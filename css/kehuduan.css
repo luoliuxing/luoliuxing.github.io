@@ -1,0 +1,140 @@
+*{
+			margin: 0;
+			padding: 0;
+		}
+#tou{
+				height: 80px;
+				width: 1500px;
+				margin: auto;/*水平居中*/
+			}
+		#t1{
+				height: 80px;
+				width: 200px;
+				/*background-color: blue;*/
+				float: left;
+				font-size: 20px;
+				text-align: center;
+				line-height: 80px;
+			}
+		.kk{
+		    	margin: 0;
+		    	background-image: url(../img/qq.png);
+				background-size: 50px 50px;
+				background-repeat: no-repeat;
+				padding:0 0 0 40px;
+				background-position:20px center;
+				
+		    }	
+		.u1{
+				list-sytle:none;
+				height: 80px;
+				width: 650px;
+				float: left;
+				margin: 0;
+				padding: 0;
+			}	
+			
+		.l1{
+				height: 80px;
+				width: 130px;
+				float: left;
+				line-height: 80px;
+				list-style: none;/*去除小黑点*/
+			}
+		.l1 a:hover{
+				color: #31C27C;
+			}  
+		#t2{
+				height: 30px;
+				width: 90px;
+				float: right;
+				text-align: center;
+				margin-right: 50px;
+				border:1px solid #000000;
+				margin-top: 25px;
+				line-height: 30px;
+				color: #000000;
+			}
+			#t3{
+				height: 30px;
+				width: 110px;
+				float: right;
+				text-align: center;
+				color: #FFFFFF;
+				margin-right: 20px;
+				background: #31C27C;
+				margin-top: 25px;
+				line-height: 30px;
+			}
+		.t4{
+		    	margin: 0;
+		    	width: 45px;
+		    	height: 45px;
+		    	float: right;
+		    	background-image: url(../img/touxiang.png);/*设置图标*/
+				background-size: 45px 45px;/*设置图标大小*/
+				background-position:0px center;/*设置图标位置*/
+				background-repeat: no-repeat;/*设置图标不重复*/
+				padding:0 0 0 0px;
+				margin-top: 15px;
+				margin-right: 20px;
+		    }
+		input{
+		        width: 240px;
+		        border: 1px solid #e2e2e2;
+		        height: 30px;
+		        float: right;
+		        background-image: url(../img/sousuo.png);
+		        background-repeat: no-repeat;
+		        background-size: 25px;
+		        background-position:5px center;
+		        padding:0 0 0 40px;
+		        margin-right: 20px;
+		        margin-top: 25px;
+		        outline:none;/*去除默认样式*/
+		    }
+		.a1{
+				color: #000000;
+				display: block; /*转换为块级元素*/
+				text-align: center;/*水平居中*/
+				text-decoration: none;/*去除下划线*/
+			}
+/***********************************************************分割线******************************************************/
+			#khd{
+				width: 1500px;
+				height: 650px;
+				padding: 10px;
+				background-image: url(../img/gsmh.jpg);
+				margin: auto;
+			}
+			#khd h1{
+				width: 600px;
+				color: white;
+				margin:auto;
+				margin-top: 100px;
+				font-size: 50px;
+				text-align: center;
+			}
+			.ljxz{
+				width: 300px;
+				height: 50px;
+				margin: 50px auto;
+				background: #31C27C;
+				color: white;
+				border:1px solid ;/*边框*/
+				border-radius:50px;/*边框圆角*/
+				
+			}
+			.ljxz p{
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+				font-size: 25px;
+			}
+			img{
+				width: 200px;
+				height: 200px;
+				display: block;
+				margin: auto;
+			}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/kehuduan.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.ripples.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#khd').ripples({
+				  resolution: 512,
+				  dropRadius: 20, //px
+				  perturbance: 0.04
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="tou">
+			<div id="t1">
+				<h3 class="kk">青柠音乐</h3>
+			</div>
+			<ul class="u1" role="nav">
+            <li class="l1">
+                <a href="index.html" class="a1" title="音乐馆">音乐馆</a>
+            </li>
+            <li class="l1">
+                <a href="mymusic.html" class="a1" title="我的音乐">我的音乐</a>
+            </li>
+            <li class="l1" style="background: #31C27C;">
+                <a href="#" class="a1" title="客户端"  style=" color: white;">客户端</a>
+            </li>
+	    	<li class="l1">
+	        <a href="piaowu.html" class="a1" title="票务">票务</a>
+	    	</li>
+	    	<li class="l1">
+	        <a href="#" class="a1" title="VIP" >VIP</a>
+	    	</li>
+        	</ul>
+        	<a href="#">
+				<div id="t2">
+		        	<h5 style="margin: 0;" >开通付费包</5>
+		        </div>
+	        </a>
+	        <a href="#">
+				<div id="t3">
+		        	<h5 style="margin: 0;">开通绿钻豪华版</5>
+		        </div>
+	        </a>
+	        <div class="t4"></div>
+	        	<input type="text" name="search" placeholder="搜索音乐、MV、歌单、用户">
+		</div>
+		<div id="khd">
+			<h1>青柠音乐，享你所想<br />
+				下载青柠客户端想听就听
+			</h1>
+			<img src="img/pc.png" />
+			<a href="https://dldir1.qq.com/music/clntupate/QQMusicSetup.exe" 
+				style="text-decoration: none;/*去除下划线*/">
+				<div class="ljxz">
+				<p>立即下载</p>
+				</div>
+			</a>
+		</div>
+		
+	</body>
+</html>

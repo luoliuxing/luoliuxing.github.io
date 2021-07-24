@@ -1,0 +1,490 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐播放</title>
+		<link rel="stylesheet" href="css/bofanyy.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<style type="text/css">
+			.fm{
+				transform: rotate(0deg);
+				animation: rot 15s linear infinite;
+			}
+			#bofa{
+				height: 750px;
+				width: 1500px;
+				background-image: url(img/bg2.jpg);
+				background-size:100% 100%;
+				margin: auto;
+			}
+			.xia-ul2{
+			list-sytle:none;
+			height: 40px;
+			width: 700px;
+			padding: 0;
+			margin-top: 40px;
+			float: left;
+		}
+		.xia-ul2 li{
+			height: 40px;
+			width: 120px;
+			float: left;
+			line-height: 40px;
+			list-style: none;/*去除小黑点*/
+			margin-left: 3px;
+			margin-right: 3px;
+			text-align: center;
+			border:1px solid #A8A8A8;
+			cursor: pointer;/*添加小手*/
+			color: #A8A8A8;
+			opacity: 0.5;
+		}
+		.xia-ul2 li:hover{
+			border:1px solid white;
+			color: white;
+		}
+		.xia-ul2 img{
+			width: 20px;
+			height: 20px;
+			float: left;
+			margin-top: 10px;
+		}
+		/**************************************************播放列表***************************************************/
+		.lebiao{
+			width: 800px;
+			height: 500px;
+			list-sytle:none;
+			float: left;
+			padding: 0;
+
+		}
+		.lebiao li{
+			list-style: none;/*去除小黑点*/
+			height: 50px;
+			width: 800px;
+			border-bottom:1px solid rgba(211,211,211,0.05);
+			
+		}
+		.lebiao span{
+			color: #A8A8A8;
+			opacity: 0.5;
+		}
+		#you{
+			width: 500px;
+			height: 630px;
+			float: right;
+			margin-right: 100px;
+		}
+		#zhuo{
+			float: left;
+			width: 800px;
+			margin-left: 100px;
+			
+		}
+		.xfk{
+			width: 15px;
+			height: 15px;
+			border:1px solid #A8A8A8;
+			float: left;
+			margin-top: 17px;
+			margin-left: 5px;
+			opacity: 0.5;
+			cursor: pointer;/*添加小手*/
+		}
+		#sz{
+			width: 25px;
+			height: 50px;
+			float: left;
+			margin-left: 30px;
+			text-align: center;
+			line-height: 50px;
+			color: #A8A8A8;
+			opacity: 0.5;
+		}
+		#gequ{
+			height: 50px;
+			width: 440px;
+			float: left;
+			line-height: 50px;
+			margin-left: 10px;
+		}
+		#geshou{
+			height: 50px;
+			width: 200px;
+			float: left;
+			line-height: 50px;
+		}
+		#shichang{
+			height: 50px;
+			width: 70px;
+			float: left;
+			line-height: 50px;
+		}
+		#fenmian{
+			width: 200px;
+			height: 200px;
+			margin: auto;
+			border-radius:50%;/*边框圆角*/
+			margin-top: 40px;
+			/*transform: rotate(0deg);
+			animation: rot 15s linear infinite;*/
+			border:5px solid rgba(0,0,0,0.3);
+		}
+		#fenmian img{
+			width: 200px;
+			height: 200px;
+			border-radius:50%;
+		}
+		/*旋转代码*/
+		@keyframes rot{
+			form{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+		#di{
+			width: 1300px;
+			height: 80px;
+			float: left;
+			/*background: blueviolet;*/
+			margin-left: 100px;
+		}
+		.qjht{
+			width: 80px;
+			height: 80px;
+			float: left;
+		}
+		.zhuo-img{
+			width: 30px;
+			height: 30px;
+			margin-top: 25px;
+			cursor: pointer;/*添加小手*/
+			opacity: 0.5;
+		}
+		.jdt{
+			width: 560px;
+			height: 80px;
+			float: left;
+			opacity: 0.5;
+		}
+		.di-you{
+			width: 500px;
+			height: 80px;
+			float: left;
+		}
+		.jdt-shang{
+			height: 30px;
+			width: 100%;
+			margin-top: 25px;
+			color: #A8A8A8;
+		}
+		.di-you-tubiao{
+			width: 50px;
+			height: 80px;
+			float: left;
+		}
+		.di-you-tubiao img{
+			width: 30px;
+			height: 30px;
+			margin-top: 25px;
+			opacity: 0.5;
+		}
+		#di-anniu{
+			width: 70px;
+			height: 25px;
+			float: left;
+			border: 2px solid #A8A8A8;
+			border-radius:30px;/*边框圆角*/
+			margin-top: 23px;
+			padding-top: 2px;
+			padding-left: 2px;
+			opacity: 0.5;
+		}
+		#di-anniu span{
+			background: #A8A8A8;
+			height: 22px;
+			width: 22px;
+			display: block;
+			border-radius:50px;/*边框圆角*/
+			font-size: 10px;
+			line-height: 22px;
+			text-align: center;
+		}
+		#xqing{
+			width: 200px;
+			height: 200px;
+			margin: auto;
+			
+		}
+		#xqing p{
+			text-align: center;
+			margin: 5px;
+			color: #A8A8A8;
+			opacity: 0.5;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="bofa">
+			<p style="font-size: 30px; color: #A8A8A8; opacity: 0.3; margin: 0;">青柠音乐</p>
+			<div id="zhuo">
+				
+			<ul class="xia-ul2">
+					<li>
+						<img src="img/收 藏.png" style="margin-left: 30px;"/>
+						<span style=" float: left; margin-left: 5px;">收藏</span>
+					</li>
+					<li>
+						<img src="img/添加.png" style="margin-left: 23px;"/>
+						<span style=" float: left; margin-left: 5px;">添加到</span>
+					</li>
+					<li>
+						<img src="img/下载.png" style="margin-left: 30px;"/>
+						<span style=" float: left; margin-left: 5px;">下载</span>
+					</li>
+					<li>
+						<img src="img/删 除.png" style="margin-left: 30px;"/>
+						<span style=" float: left; margin-left: 5px;">删除</span>
+					</li>
+					<li>
+						<img src="img/清除.png" style="margin-left: 15px;"/>
+						<span style=" float: left; margin-left: 5px;">清空列表</span>
+					</li>
+			</ul>
+			<ul class="lebiao">
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						
+					</div>
+					<div id="gequ">
+						<span>歌曲</span>
+					</div>
+					<div id="geshou">
+						<span>歌手</span>
+					</div>
+					<div id="shichang">
+						<span>时长</span>
+					</div>
+				</li>
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						1
+					</div>
+					<div id="gequ">
+						<span>告白气球</span>
+					</div>
+					<div id="geshou">
+						<span>周杰伦</span>
+					</div>
+					<div id="shichang">
+						<span>04:50</span>
+					</div>
+				</li>
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						2
+					</div>
+					<div id="gequ">
+						<span>有何不可</span>
+					</div>
+					<div id="geshou">
+						<span>许嵩</span>
+					</div>
+					<div id="shichang">
+						<span>04:01</span>
+					</div>
+				</li>
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						3
+					</div>
+					<div id="gequ">
+						<span>光年之外</span>
+					</div>
+					<div id="geshou">
+						<span>邓紫棋</span>
+					</div>
+					<div id="shichang">
+						<span>03:55</span>
+					</div>
+				</li>
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						4
+					</div>
+					<div id="gequ">
+						<span>Say Goodnight</span>
+					</div>
+					<div id="geshou">
+						<span>Rico Davis</span>
+					</div>
+					<div id="shichang">
+						<span>03:41</span>
+					</div>
+				</li>
+				<li>
+					<div class="xfk">
+						<img src="img/确认.png" style="width: 15px; height: 15px;"/>
+					</div>
+					<div id="sz">
+						5
+					</div>
+					<div id="gequ">
+						<span>演员</span>
+					</div>
+					<div id="geshou">
+						<span>薛之谦</span>
+					</div>
+					<div id="shichang">
+						<span>04:30</span>
+					</div>
+				</li>
+			</ul>
+			</div>
+			<div id="you">
+				<div id="fenmian">
+					<img src="img/03.jpg" />
+				</div>
+				<div id="xqing">
+					<p id="xq1">年少有为</p>
+					<p id="xq2">李荣浩</p>
+				</div>
+			</div>
+			<div id="di">
+				<div class="qjht">
+					<img class="zhuo-img" src="img/后退.png" id="ht"/>
+				</div>
+				<div class="qjht">
+					<img class="zhuo-img"  src="img/暂停.png" id="zt"/>
+				</div>
+				<div class="qjht">
+					<img class="zhuo-img"  src="img/前进.png" id="qj"/>
+				</div>
+				<div class="jdt">
+					<div class="jdt-shang">
+						<span style="float: left;" id="gm">有何不可-许嵩</span>
+						<span style="float: right;" id="sj">03:05/04:39</span>
+					</div>
+					<!--<div style="width: 100%; height: 50px;">-->
+						<input type="range" style="width: 100%; margin: 0;" min="0" max="10" value="0" id="ip" onchange="checkField(this.value)"/>
+					<!--</div>-->
+				</div>
+				<div class="di-you">
+					<div class="di-you-tubiao" style="margin-left: 20px;">
+						<img src="img/循环.png"/>
+					</div>
+					<div class="di-you-tubiao">
+						<img src="img/收 藏.png" />
+					</div>
+					<div class="di-you-tubiao">
+						<img src="img/下载.png" />
+					</div>
+					<div class="di-you-tubiao">
+						<img src="img/评论.png" />
+					</div>
+					<div id="di-anniu">
+						<span style="">OFF</span>
+					</div>
+						<img src="img/音量.png" style="width: 25px; height: 25px; margin-top: 25px; margin-left: 5px; float: left; opacity: 0.5;"/>
+						<input type="range" style="opacity: 0.5; width: 130px; margin:37px 0 0 5px;" min="0" max="100" value="50" id="yl" onchange="checkyl(this.value)"/>
+					<!--<embed src="music/G.E.M. 邓紫棋 - 光年之外.mp3" hidden="true" autostart="true" loop="true">-->
+						<audio autoplay id="au" loop="loop">
+							<source src="music/许嵩 - 有何不可.mp3" type="audio/mpeg">
+						</audio>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var audio = document.getElementById("au");
+			var input = document.getElementById("ip");
+			$(document).ready(function(){
+				$(".xfk").find('img').toggle();
+				$(".xfk").click(function(){
+					$(this).find('img').toggle();
+				});
+				$(".xfk:first").click(function(){
+					$(".xfk img").toggle();
+					$(this).find('img').toggle();
+				});
+//				分割线
+				$("#fenmian").addClass("fm");
+				$("#zt").click(function(){
+//					alert("被点击了");
+					if(audio.paused){
+						audio.play();
+						$("#fenmian").addClass("fm");
+						$("#zt").attr("src","img/暂停.png");
+					}else{
+						audio.pause();
+						$("#fenmian").removeClass("fm");
+						$("#zt").attr("src","img/播放(2).png");
+					}
+				});
+				$("#qj").click(function(){
+					audio.src="music/G.E.M. 邓紫棋 - 光年之外.mp3";
+					audio.play();
+					$("#fenmian").addClass("fm");
+					$("#zt").attr("src","img/暂停.png");
+					document.getElementById("gm").innerHTML="邓紫棋 - 光年之外";
+					document.getElementById("xq1").innerHTML="光年之外";
+					document.getElementById("xq2").innerHTML="邓紫棋";
+				});
+				
+				$("#ht").click(function(){
+//					audio.playbackRate=1.5;
+//					audio.currentTime=100;
+					audio.src="music/Rico Davis - Say Goodnight.mp3";
+					audio.play();
+					$("#fenmian").addClass("fm");
+					$("#zt").attr("src","img/暂停.png");
+					document.getElementById("gm").innerHTML="Rico Davis - Say Goodnight";
+					document.getElementById("xq1").innerHTML="Say Goodnight";
+					document.getElementById("xq2").innerHTML="Rico Davis";
+				});
+				
+			});
+			
+			
+			function checkField(val){
+					audio.currentTime=val;
+			}
+			function checkyl(val){
+					 audio.volume=val/100;
+			}
+			function showLogin(){
+				input.max=parseInt(audio.duration);//取整数赋值parseInt()或~~
+				input.value=~~(audio.currentTime);
+					var i = ~~(input.max/60);
+					var o = input.max-i*60;
+					var j = ~~(input.value/60);
+					var p = input.value-j*60;
+//					alert("输入值已改变。新值为: " + o);
+					if(o>9){
+						var sj = document.getElementById("sj").innerHTML="/0"+i+":"+o;
+					}else{
+						var sj = document.getElementById("sj").innerHTML="/0"+i+":"+"0"+o;
+					}	
+					if(p>9){
+						document.getElementById("sj").innerHTML="0"+j+":"+p+sj;
+					}else{
+						document.getElementById("sj").innerHTML="0"+j+":"+"0"+p+sj;
+					}
+			}
+			var sv =setInterval("showLogin()","1000");
+			
+		</script>
+	</body>
+</html>

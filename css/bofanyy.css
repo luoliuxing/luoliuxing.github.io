@@ -1,0 +1,66 @@
+/*清除原有样式*/
+input[type=range] {
+    -webkit-appearance: none;
+    width: 16vw;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+/*设置滑动条的样式*/
+input[type=range]::-webkit-slider-runnable-track {
+   height: 0.3vh;
+   background: #A8A8A8;
+}
+input[type=range]::-moz-range-track {
+   height: 0.3vh;
+   background: #A8A8A8;
+}
+/*去除获取焦点时的边框*/ 
+input[type=range]:focus {
+    outline: none;
+}
+/*设置滑块样式*/
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 0.7vw;
+    width: 1.4vh;
+    background: #FFFFFF;
+    margin-top: -5px; 
+    border-radius:50%;/*边框圆角*/
+} 
+input[type=range]::-moz-range-thumb  {
+    -webkit-appearance: none;
+    height: 0.7vw;
+    width: 1.4vh;
+    background: #FFFFFF;
+    margin-top: -5px; 
+    border-radius:50%;/*边框圆角*/
+}
+/*IE下*/
+input[type=range] {
+    -webkit-appearance: none;
+    width: 16vw;
+   background: #509EFE;
+}
+/*设置IE下滑动条的样式*/
+input[type=range]::-ms-track {
+    height: 8px;
+    border-color: transparent; /*去除原有边框*/
+    color: transparent; /*去除轨道内的竖线*/
+    background: #E6EFFB;
+}
+/*设置IE下滑块样式*/
+input[type=range]::-ms-thumb {
+    height: 8px;
+    width: 35px;
+    background: #61A5FF;   
+}
+ 
+input[type=range]:focus::-ms-fill-lower {
+    background: #E6EFFB;
+    border: none;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #E6EFFB;
+    border: none;
+}
